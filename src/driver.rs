@@ -189,7 +189,7 @@ pub fn parse_preprocessed(config: &Config, source: String) -> Result<Parse, Synt
     }
 }
 
-fn preprocess(config: &Config, source: &Path) -> io::Result<String> {
+pub fn preprocess(config: &Config, source: &Path) -> io::Result<String> {
     let mut cmd = Command::new(&config.cpp_command);
 
     for item in &config.cpp_options {
